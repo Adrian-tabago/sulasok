@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>MovieFlix - Watch Movie</title>
+
+    <link rel="stylesheet" href="full movie/design.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ===================================================== -->
+
+    <nav>
+
+        <div class="logo">
+            MOVIEFLIX
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         MOVIE PLAYER
+    ===================================================== -->
+
+    <main class="movie-page">
+
+
+        <div class="movie-header">
+
+            <button
+                id="backButton"
+                class="back-button"
+                type="button"
+            >
+                ← Back to Movies
+            </button>
+
+
+         
+
+            <h1 id="movieTitle">
+                Loading Movie...
+            </h1>
+
+
+            <p id="movieStatus">
+                Loading player...
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PLAYER
+        ================================================= -->
+
+        <div id="player-container" class="player-container">
+
+         
+
+        </div>
+
+
+
+        <!-- =================================================
+             INFO
+        ================================================= -->
+
+        <div class="movie-info">
+
+            <div class="info-box">
+
+                <span>
+                    MOVIE
+                </span>
+
+                <strong id="movieId">
+                    ---
+                </strong>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <span>
+                    PLAYER
+                </span>
+
+                <strong>
+                    MovieFlix
+                </strong>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
+<script>
+
+        const id = localStorage.getItem("movieId");
+        const title = localStorage.getItem("movieTitle");
+
+        console.log("Movie ID:", id);
+        console.log("Movie Title:", title);
+
+
+        document.getElementById("movieTitle").textContent = title;
+        document.getElementById("movieId").textContent = id;
+
+
+        document.getElementById("player-container").innerHTML = `
+
+            <h2>${title}</h2>
+
+            <iframe
+                width="800"
+                height="450"
+                src="https://vidsrc.sbs/embed/movie/${id}"
+                allowfullscreen>
+            </iframe>
+
+        `;
+
+            document.getElementById("backButton").addEventListener(
+        "click",
+        function() {
+
+            window.location.href = "movie.html";
+
+        })
+
+
+</script>
+
+</body>
+
+</html>

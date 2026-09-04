@@ -1,0 +1,467 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    color: white;
+
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+
+        radial-gradient(
+            circle at top right,
+            #241014 0%,
+            #090909 35%,
+            #050505 100%
+        );
+
+    overflow-x: hidden;
+}
+
+
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #050505;
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background: #333;
+
+    border-radius: 20px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e50914;
+}
+
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+nav {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 45px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,0.96),
+            rgba(0,0,0,0.75)
+        );
+
+    backdrop-filter: blur(18px);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.06);
+
+    z-index: 999;
+}
+
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+
+    color: #e50914;
+
+    font-size: 26px;
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+
+    margin-right: 45px;
+
+    text-shadow:
+        0 0 20px rgba(229,9,20,0.35);
+}
+
+
+
+/* =====================================================
+   NAV LINKS
+===================================================== */
+
+nav a {
+
+    position: relative;
+
+    color: #aaa;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-right: 28px;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: white;
+}
+
+
+nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: #e50914;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+
+/* =====================================================
+   MOVIE PAGE
+===================================================== */
+
+.movie-page {
+
+    width: min(1200px, 94%);
+
+    margin: 0 auto;
+
+    padding-top: 120px;
+
+    padding-bottom: 80px;
+}
+
+
+
+/* =====================================================
+   MOVIE HEADER
+===================================================== */
+
+.movie-header {
+
+    margin-bottom: 25px;
+}
+
+
+.movie-header h1 {
+
+    margin-top: 25px;
+
+    font-size:
+        clamp(28px, 5vw, 48px);
+
+    font-weight: 900;
+
+    letter-spacing: -1.5px;
+}
+
+
+.movie-header h1::first-letter {
+    color: white;
+}
+
+
+.movie-header p {
+
+    margin-top: 8px;
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.back-button {
+
+    border: none;
+
+    border-radius: 9px;
+
+    padding: 11px 18px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    color: white;
+
+    border:
+        1px solid rgba(255,255,255,0.1);
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+
+.back-button:hover {
+
+    background: #e50914;
+
+    border-color: #e50914;
+
+    transform: translateX(-3px);
+}
+
+
+
+/* =====================================================
+   PLAYER
+===================================================== */
+
+.player-container {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    background: black;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+
+        0 30px 100px rgba(0,0,0,0.8),
+
+        0 0 50px rgba(229,9,20,0.08);
+}
+
+
+.player-container iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    display: block;
+}
+
+
+
+/* =====================================================
+   MOVIE INFO
+===================================================== */
+
+.movie-info {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+
+.info-box {
+
+    flex: 1;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #181818,
+            #0d0d0d
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    border-radius: 12px;
+}
+
+
+.info-box span {
+
+    display: block;
+
+    color: #777;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
+}
+
+
+.info-box strong {
+
+    color: white;
+
+    font-size: 16px;
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    nav {
+
+        height: 68px;
+
+        padding: 0 18px;
+    }
+
+
+    .logo {
+
+        font-size: 21px;
+
+        margin-right: 20px;
+    }
+
+
+    nav a {
+        display: none;
+    }
+
+
+    .movie-page {
+
+        width: 94%;
+
+        padding-top: 100px;
+    }
+
+
+    .movie-header h1 {
+
+        font-size: 30px;
+
+        margin-top: 20px;
+    }
+
+
+    .player-container {
+
+        border-radius: 12px;
+    }
+
+
+    .movie-info {
+
+        flex-direction: column;
+    }
+
+
+    .info-box {
+        padding: 16px;
+    }
+
+}
+
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 430px) {
+
+    .movie-page {
+        padding-top: 95px;
+    }
+
+
+    .movie-header h1 {
+        font-size: 25px;
+    }
+
+
+    .back-button {
+
+        width: 100%;
+
+        padding: 12px;
+    }
+
+}

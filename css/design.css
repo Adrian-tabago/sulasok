@@ -1,0 +1,1060 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 280px;
+    min-height: 100vh;
+
+    background: #050505;
+    color: white;
+
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+
+    /*
+        Makes the container at least
+        the full screen height.
+    */
+
+    min-height: 100dvh;
+
+    width: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+
+
+    /*
+        Background image + dark overlay.
+
+        The overlay makes the text
+        easier to see.
+    */
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.75) 40%,
+            rgba(0, 0, 0, 0.35) 75%,
+            rgba(0, 0, 0, 0.85) 100%
+        ),
+
+        url("1144a3f8-dafe-491f-96c3-2d749d572c55.jpg");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+nav {
+
+    /*
+        Responsive width.
+
+        92% on smaller screens
+        Maximum 1400px on large screens.
+    */
+
+    width: min(92%, 1400px);
+
+    min-width: 280px;
+
+    /*
+        Responsive navbar height.
+    */
+
+    min-height:
+        clamp(65px, 7vw, 82px);
+
+    display: flex;
+
+    align-items: center;
+
+    /*
+        Responsive padding.
+    */
+
+    padding:
+        clamp(10px, 2vw, 18px)
+        clamp(14px, 3vw, 30px);
+
+    /*
+        Center the navbar.
+    */
+
+    margin:
+        clamp(12px, 2vw, 22px)
+        auto;
+
+    /*
+        Modern glass effect.
+    */
+
+    background:
+        rgba(15, 15, 15, 0.55);
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+    /*
+        Glass border.
+    */
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    border-radius:
+        clamp(14px, 2vw, 22px);
+
+    /*
+        Shadow.
+    */
+
+    box-shadow:
+        0 15px 50px
+        rgba(0, 0, 0, 0.45);
+
+    position: relative;
+
+    z-index: 20;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    /*
+        Responsive logo size.
+    */
+
+    font-size:
+        clamp(20px, 2.5vw, 32px);
+
+    font-weight: 900;
+
+    letter-spacing:
+        clamp(-1.5px, -0.1vw, -0.5px);
+
+    color: #e50914;
+
+    /*
+        Prevents MOVIEFLIX
+        from wrapping.
+    */
+
+    white-space: nowrap;
+
+    min-width: 120px;
+
+    /*
+        Red glow.
+    */
+
+    text-shadow:
+        0 0 25px
+        rgba(229, 9, 20, 0.4);
+}
+
+
+/* =========================================
+   SEARCH BOX
+========================================= */
+
+.search-box {
+
+    /*
+        Pushes search to the
+        right side.
+    */
+
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap:
+        clamp(6px, 1vw, 10px);
+
+    min-width: 0;
+}
+
+
+/* =========================================
+   SEARCH INPUT
+========================================= */
+
+.search-box input {
+
+    /*
+        Minimum: 150px
+        Responsive: 20vw
+        Maximum: 320px
+    */
+
+    width:
+        clamp(150px, 20vw, 320px);
+
+    /*
+        Responsive height.
+    */
+
+    min-height:
+        clamp(40px, 5vw, 50px);
+
+    padding:
+        0 clamp(12px, 2vw, 18px);
+
+    /*
+        Glass border.
+    */
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    border-radius:
+        clamp(9px, 1.5vw, 15px);
+
+    outline: none;
+
+    /*
+        Transparent glass background.
+    */
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color: white;
+
+    font-size:
+        clamp(12px, 1.2vw, 15px);
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+
+    min-width: 0;
+}
+
+
+/* =========================================
+   SEARCH PLACEHOLDER
+========================================= */
+
+.search-box input::placeholder {
+
+    color:
+        rgba(255, 255, 255, 0.45);
+}
+
+
+/* =========================================
+   SEARCH FOCUS
+========================================= */
+
+.search-box input:focus {
+
+    border-color:
+        #e50914;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(229, 9, 20, 0.12),
+
+        0 0 25px
+        rgba(229, 9, 20, 0.18);
+}
+
+
+/* =========================================
+   SEARCH BUTTON
+========================================= */
+
+#enter {
+
+    /*
+        Responsive width.
+    */
+
+    min-width:
+        clamp(70px, 8vw, 105px);
+
+    /*
+        Responsive height.
+    */
+
+    min-height:
+        clamp(40px, 5vw, 50px);
+
+    padding:
+        0 clamp(12px, 2vw, 20px);
+
+    border: none;
+
+    border-radius:
+        clamp(9px, 1.5vw, 15px);
+
+    /*
+        Modern red gradient.
+    */
+
+    background:
+        linear-gradient(
+            135deg,
+            #e50914,
+            #b20710
+        );
+
+    color: white;
+
+    font-size:
+        clamp(12px, 1.2vw, 15px);
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* =========================================
+   SEARCH BUTTON HOVER
+========================================= */
+
+#enter:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff1b27,
+            #e50914
+        );
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(229, 9, 20, 0.4);
+}
+
+
+/* =========================================
+   SEARCH BUTTON CLICK
+========================================= */
+
+#enter:active {
+
+    transform:
+        scale(0.96);
+}
+
+
+/* =========================================
+   HOME PAGE
+========================================= */
+
+.home-page {
+
+    /*
+        90% of viewport height.
+
+        Never smaller than 500px.
+    */
+
+    min-height:
+        max(90dvh, 500px);
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    /*
+        Responsive spacing.
+    */
+
+    padding:
+        clamp(20px, 5vw, 80px);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/*
+=========================================
+   MAIN RED GLOW
+=========================================
+
+home-page::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: clamp(300px, 55vw, 750px);
+    height: clamp(300px, 55vw, 750px);
+
+    border-radius: 50%;
+
+    background: rgba(229, 9, 20, 0.15);
+
+    filter: blur(110px);
+
+    top: 45%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+}
+*/
+
+
+/* =========================================
+   SECOND RED GLOW
+========================================= */
+
+.home-page::after {
+
+    content: "";
+
+    position: absolute;
+
+    width:
+        clamp(150px, 25vw, 350px);
+
+    height:
+        clamp(150px, 25vw, 350px);
+
+    border-radius: 50%;
+
+    background:
+        rgba(229, 9, 20, 0.08);
+
+    filter: blur(80px);
+
+    top: 15%;
+
+    right: -100px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.page {
+
+    position: relative;
+
+    /*
+        Makes content appear
+        above the glow.
+    */
+
+    z-index: 2;
+
+    width:
+        min(100%, 900px);
+
+    min-width: 280px;
+
+    min-height: 250px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    /*
+        Responsive gap.
+    */
+
+    gap:
+        clamp(20px, 4vw, 35px);
+
+    text-align: center;
+
+    padding:
+        clamp(20px, 4vw, 50px);
+}
+
+
+/* =========================================
+   HERO TITLE
+========================================= */
+
+.page h1 {
+
+    /*
+        Responsive font.
+
+        42px minimum
+        7vw responsive
+        90px maximum
+    */
+
+    font-size:
+        clamp(
+            42px,
+            7vw,
+            90px
+        );
+
+    /*
+        Tight line spacing.
+    */
+
+    line-height:
+        clamp(
+            1,
+            1.05,
+            1.1
+        );
+
+    /*
+        Modern tight letters.
+    */
+
+    letter-spacing:
+        clamp(
+            -3px,
+            -0.3vw,
+            -1px
+        );
+
+    font-weight: 900;
+
+    color: white;
+
+    max-width: 900px;
+
+    /*
+        Makes text readable
+        over the background.
+    */
+
+    text-shadow:
+        0 5px 30px
+        rgba(0, 0, 0, 0.8);
+}
+
+
+/* =========================================
+   RED HERO TEXT
+========================================= */
+
+.page h1 span {
+
+    color: #e50914;
+
+    text-shadow:
+        0 0 30px
+        rgba(229, 9, 20, 0.5);
+}
+
+
+/* =========================================
+   HERO BUTTON
+========================================= */
+
+.hero-button {
+
+    min-width:
+        clamp(150px, 20vw, 220px);
+
+    min-height:
+        clamp(45px, 6vw, 58px);
+
+    padding:
+        0 clamp(18px, 3vw, 30px);
+
+    border: none;
+
+    border-radius:
+        clamp(8px, 1.5vw, 14px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #e50914,
+            #b20710
+        );
+
+    color: white;
+
+    font-size:
+        clamp(13px, 1.5vw, 16px);
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+
+    box-shadow:
+        0 10px 30px
+        rgba(229, 9, 20, 0.2);
+}
+
+
+/* =========================================
+   HERO BUTTON HOVER
+========================================= */
+
+.hero-button:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff1722,
+            #e50914
+        );
+
+    transform:
+        translateY(-5px)
+        scale(1.03);
+
+    box-shadow:
+        0 18px 45px
+        rgba(229, 9, 20, 0.4);
+}
+
+
+/* =========================================
+   HERO BUTTON ACTIVE
+========================================= */
+
+.hero-button:active {
+
+    transform:
+        scale(0.97);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 700px) {
+
+    nav {
+
+        width:
+            min(94%, 600px);
+
+        min-height: 65px;
+    }
+
+
+    .logo {
+
+        min-width: auto;
+    }
+
+
+    .search-box {
+
+        flex: 1;
+
+        min-width: 0;
+    }
+
+
+    .search-box input {
+
+        width: 100%;
+    }
+
+
+    .page h1 {
+
+        font-size:
+            clamp(
+                38px,
+                8vw,
+                60px
+            );
+    }
+}
+
+
+/* =========================================
+   PHONE
+========================================= */
+
+@media (max-width: 520px) {
+
+    nav {
+
+        width:
+            min(94%, 450px);
+
+        min-height: 120px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+
+    .logo {
+
+        min-height: 30px;
+    }
+
+
+    .search-box {
+
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+
+    .search-box input {
+
+        width: 100%;
+    }
+
+
+    #enter {
+
+        min-width: 75px;
+    }
+
+
+    .home-page {
+
+        min-height:
+            max(70dvh, 450px);
+
+        padding: 20px;
+    }
+
+
+    .page {
+
+        min-width: 280px;
+
+        padding: 15px;
+
+        gap: 25px;
+    }
+
+
+    .page h1 {
+
+        font-size:
+            clamp(
+                36px,
+                11vw,
+                50px
+            );
+    }
+
+
+    .hero-button {
+
+        width: 100%;
+
+        max-width: 220px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONE
+========================================= */
+
+@media (max-width: 350px) {
+
+    nav {
+
+        min-height: 170px;
+    }
+
+
+    .search-box {
+
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+
+    .search-box input {
+
+        width: 100%;
+    }
+
+
+    #enter {
+
+        width: 100%;
+    }
+
+
+    .home-page {
+
+        min-height: 430px;
+    }
+
+
+    .page h1 {
+
+        font-size: 34px;
+    }
+}
+
+/* =========================
+   MOVIE GRID
+========================= */
+
+#hero-content {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 30px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   MOVIE CARD
+========================= */
+
+.movie-card {
+    background: #181818;
+    color: white;
+
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.movie-image {
+    position: relative;
+
+    width: 100%;
+    height: 320px;
+
+    overflow: hidden;
+}
+
+.movie-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s ease;
+}
+
+
+/* IMAGE ZOOM */
+
+.movie-card:hover .movie-image img {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   PLAY BUTTON
+========================= */
+
+.play-btn {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+    border: none;
+
+    background: white;
+    color: #111;
+
+    font-size: 26px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+
+    transition: 0.3s ease;
+
+    z-index: 5;
+}
+
+
+/* BUTTON HOVER */
+
+.play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.12);
+
+    background: #ff8a3d;
+    color: white;
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.movie-card h2 {
+    margin: 18px 20px 8px;
+
+    font-size: 21px;
+
+    text-align: left;
+}
+
+.movie-card p:first-of-type {
+    margin: 0 20px;
+
+    color: #ffc107;
+
+    font-weight: bold;
+}
+
+.movie-card p:last-child {
+    margin: 12px 20px 20px;
+
+    color: #aaa;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    #hero-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   PHONE
+========================= */
+
+@media (max-width: 600px) {
+
+    #hero-content {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .movie-image {
+        height: 350px;
+    }
+
+}

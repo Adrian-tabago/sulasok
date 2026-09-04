@@ -1,0 +1,1117 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background:
+        radial-gradient(
+            circle at top right,
+            #241014 0%,
+            #090909 35%,
+            #050505 100%
+        );
+
+    color: white;
+
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #050505;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 20px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e50914;
+}
+
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+nav {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 45px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,0.96),
+            rgba(0,0,0,0.75)
+        );
+
+    backdrop-filter: blur(18px);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.06);
+
+    z-index: 999;
+}
+
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+
+    font-size: 26px;
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+
+    color: #e50914;
+
+    margin-right: 45px;
+
+    text-shadow:
+        0 0 20px rgba(229,9,20,0.35);
+}
+
+
+
+/* =====================================================
+   NAV LINKS
+===================================================== */
+
+nav a {
+
+    position: relative;
+
+    color: #aaa;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-right: 28px;
+
+    transition: 0.3s;
+}
+
+
+nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: #e50914;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: white;
+}
+
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+
+/* =====================================================
+   SEARCH AREA
+===================================================== */
+
+.search-box {
+
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+#palabas {
+
+    width: 250px;
+
+    height: 42px;
+
+    padding: 0 17px;
+
+    color: white;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    border:
+        1px solid rgba(255,255,255,0.12);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+#palabas::placeholder {
+    color: #777;
+}
+
+
+#palabas:focus {
+
+    border-color: #e50914;
+
+    background:
+        rgba(255,255,255,0.1);
+
+    box-shadow:
+        0 0 25px rgba(229,9,20,0.15);
+}
+
+
+
+/* =====================================================
+   SEARCH BUTTON
+===================================================== */
+
+#enter {
+
+    height: 42px;
+
+    padding: 0 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #e50914;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+#enter:hover {
+
+    background: #ff1722;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 30px rgba(229,9,20,0.35);
+}
+
+
+#enter:active {
+    transform: scale(0.96);
+}
+
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero-banner {
+
+    position: relative;
+
+    min-height: 500px;
+
+    margin-top: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 70px 7%;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 75% 35%,
+            rgba(229,9,20,0.25),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            90deg,
+            #050505 0%,
+            #080808 35%,
+            rgba(8,8,8,0.55) 65%,
+            #050505 100%
+        );
+}
+
+
+.hero-banner::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -150px;
+    top: -150px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(229,9,20,0.2),
+            transparent 65%
+        );
+
+    filter: blur(20px);
+
+    pointer-events: none;
+}
+
+
+.hero-banner::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 150px;
+
+    background:
+        linear-gradient(
+            transparent,
+            #050505
+        );
+
+    pointer-events: none;
+}
+
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero-text {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 620px;
+}
+
+
+.hero-text h1 {
+
+    font-size:
+        clamp(45px, 6vw, 78px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+
+    font-weight: 900;
+
+    margin-bottom: 25px;
+}
+
+
+.hero-text h1 span {
+    color: #e50914;
+}
+
+
+.hero-text p {
+
+    max-width: 530px;
+
+    color: #aaa;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+
+/* =====================================================
+   HERO BUTTON
+===================================================== */
+
+.hero-button {
+
+    border: none;
+
+    background: white;
+
+    color: black;
+
+    padding: 14px 25px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.hero-button:hover {
+
+    transform: translateY(-3px);
+
+    background: #e50914;
+
+    color: white;
+
+    box-shadow:
+        0 15px 35px rgba(229,9,20,0.3);
+}
+
+
+
+/* =====================================================
+   MOVIE SECTION
+===================================================== */
+
+#movies-section {
+    width: 100%;
+}
+
+
+.section-title {
+
+    position: relative;
+
+    padding: 0 50px;
+
+    margin: 15px 0 25px;
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+
+.section-title::before {
+
+    content: "";
+
+    display: inline-block;
+
+    width: 5px;
+
+    height: 25px;
+
+    margin-right: 12px;
+
+    vertical-align: -3px;
+
+    border-radius: 5px;
+
+    background: #e50914;
+}
+
+
+
+/* =====================================================
+   MOVIE GRID
+===================================================== */
+
+#hero-content {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(190px, 1fr)
+        );
+
+    gap: 25px;
+
+    padding:
+        0 50px 70px;
+}
+
+
+
+/* =====================================================
+   MOVIE CARD
+===================================================== */
+
+#hero-content > div {
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            180deg,
+            #181818,
+            #0d0d0d
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.07);
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+#hero-content > div:hover {
+
+    transform:
+        translateY(-10px)
+        scale(1.035);
+
+    border-color:
+        rgba(255,255,255,0.2);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.8),
+        0 0 30px rgba(229,9,20,0.12);
+
+    z-index: 10;
+}
+
+
+
+/* =====================================================
+   MOVIE POSTER
+===================================================== */
+
+#hero-content img {
+
+    width: 100%;
+
+    height: 285px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+#hero-content > div:hover img {
+    transform: scale(1.06);
+}
+
+
+
+/* =====================================================
+   CARD TEXT
+===================================================== */
+
+#hero-content h2 {
+
+    padding:
+        16px 15px 5px;
+
+    font-size: 17px;
+
+    font-weight: 750;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+#hero-content p {
+
+    padding:
+        0 15px;
+
+    color: #999;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+}
+
+
+
+/* RATING */
+
+#hero-content p:first-of-type {
+
+    color: #f5c518;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+
+
+/* DESCRIPTION */
+
+#hero-content p:last-of-type {
+
+    padding-bottom: 18px;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 3;
+
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+
+
+/* =====================================================
+   TRAILER SECTION
+===================================================== */
+
+#trailer {
+
+    position: relative;
+
+    padding:
+        80px 30px 100px;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(229,9,20,0.08),
+            transparent 45%
+        ),
+
+        #080808;
+
+    border-top:
+        1px solid rgba(255,255,255,0.06);
+}
+
+
+#trailer h2 {
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    margin-bottom: 30px;
+
+    letter-spacing: -1px;
+}
+
+
+
+/* =====================================================
+   TRAILER OVERLAY
+===================================================== */
+
+.trailer-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    background:
+        rgba(0,0,0,0.88);
+
+    backdrop-filter:
+        blur(10px);
+
+    z-index: 9999;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+
+.trailer-overlay.hide {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+
+
+/* =====================================================
+   TRAILER MODAL
+===================================================== */
+
+.trailer-modal {
+
+    position: relative;
+
+    width:
+        min(950px, 95vw);
+
+    background:
+        linear-gradient(
+            180deg,
+            #181818,
+            #090909
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.12);
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,0.9);
+}
+
+
+
+/* =====================================================
+   CLOSE BUTTON
+===================================================== */
+
+.trailer-close {
+
+    position: absolute;
+
+    top: -18px;
+    right: -18px;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #e50914;
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.5);
+
+    transition: 0.3s;
+
+    z-index: 5;
+}
+
+
+.trailer-close:hover {
+
+    background: #ff1b25;
+
+    transform:
+        rotate(90deg)
+        scale(1.08);
+}
+
+
+
+/* =====================================================
+   TRAILER TITLE
+===================================================== */
+
+.trailer-modal h2 {
+
+    color: white;
+
+    font-size: 24px;
+
+    margin-bottom: 18px;
+
+    padding-right: 35px;
+}
+
+
+
+/* =====================================================
+   TRAILER VIDEO
+===================================================== */
+
+.trailer-video {
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    border: none;
+
+    border-radius: 12px;
+
+    display: block;
+
+    background: black;
+}
+
+
+
+/* =====================================================
+   WATCH BUTTON
+===================================================== */
+
+.watch-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 18px;
+
+    padding:
+        13px 24px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #e50914;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.watch-button:hover {
+
+    background: #ff1722;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(229,9,20,0.3);
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    nav {
+
+        padding:
+            0 18px;
+    }
+
+
+    .logo {
+
+        font-size: 21px;
+
+        margin-right: 20px;
+    }
+
+
+    nav a {
+        display: none;
+    }
+
+
+    .search-box {
+
+        width: 100%;
+    }
+
+
+    #palabas {
+        width: 100%;
+    }
+
+
+    #enter {
+        padding:
+            0 15px;
+    }
+
+
+    .hero-banner {
+
+        min-height: 430px;
+
+        padding:
+            50px 25px;
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 48px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+
+    .section-title {
+
+        padding:
+            0 20px;
+
+        font-size: 23px;
+    }
+
+
+    #hero-content {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 15px;
+
+        padding:
+            0 15px 50px;
+    }
+
+
+    #hero-content img {
+        height: 240px;
+    }
+
+
+    #hero-content h2 {
+        font-size: 14px;
+    }
+
+
+    #hero-content p {
+        font-size: 12px;
+    }
+
+
+    #trailer {
+
+        padding:
+            55px 15px 70px;
+    }
+
+
+    #trailer h2 {
+        font-size: 23px;
+    }
+
+
+    .trailer-overlay {
+        padding: 15px;
+    }
+
+
+    .trailer-modal {
+
+        padding: 14px;
+
+        border-radius: 14px;
+    }
+
+
+    .trailer-modal h2 {
+
+        font-size: 18px;
+
+        margin-bottom: 13px;
+    }
+
+
+    .trailer-close {
+
+        width: 36px;
+        height: 36px;
+
+        top: -12px;
+        right: -8px;
+
+        font-size: 18px;
+    }
+
+
+    .watch-button {
+        width: 100%;
+    }
+
+}
+
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 430px) {
+
+    nav {
+        height: 68px;
+    }
+
+
+    .hero-banner {
+
+        margin-top: 68px;
+
+        min-height: 400px;
+    }
+
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+
+    #hero-content img {
+        height: 210px;
+    }
+
+
+    #palabas {
+
+        width:
+            calc(100% - 110px);
+    }
+
+}

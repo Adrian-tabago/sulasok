@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>MovieFlix</title>
+
+    <link rel="stylesheet" href="css.movie/design.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ===================================================== -->
+
+    <nav>
+
+        <div class="logo">
+            MOVIEFLIX
+        </div>
+
+
+        <a href="#">
+            Home
+        </a>
+
+        <a href="#movies-section">
+            Movies
+        </a>
+
+        <a href="#trailer">
+            TV Shows
+        </a>
+
+
+        <div class="search-box">
+
+            <input
+                type="search"
+                id="palabas"
+                placeholder="Search movies..."
+            >
+
+            <button
+                id="enter"
+                type="button"
+                onclick="movie()"
+            >
+                Search
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <div class="hero-banner">
+
+        <div class="hero-text">
+
+            <h1>
+                Unlimited
+                <span>Movies.</span>
+            </h1>
+
+
+            <p>
+                Discover popular movies, search for your
+                favorites, and explore their latest trailers
+                in one place.
+            </p>
+
+
+            <button
+                class="hero-button"
+                id="exploreMovies"
+                type="button"
+            >
+                ▶ Explore Movies
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         MOVIES
+    ===================================================== -->
+
+    <section id="movies-section">
+
+        <h2 class="section-title">
+            Popular Movies
+        </h2>
+
+
+        <div id="hero-content"></div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TRAILER SECTION
+    ===================================================== -->
+
+    <div id="trailer">
+
+        <h2>
+            Select a movie to watch its trailer
+        </h2>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         TRAILER OVERLAY
+    ===================================================== -->
+
+    <div
+        id="trailerOverlay"
+        class="trailer-overlay hide"
+    >
+
+        <div class="trailer-modal">
+
+
+            <!-- CLOSE -->
+
+            <button
+                id="trailerClose"
+                class="trailer-close"
+                type="button"
+            >
+                ×
+            </button>
+
+
+            <!-- TITLE -->
+
+            <h2 id="trailerTitle">
+                Movie Trailer
+            </h2>
+
+
+            <!-- VIDEO -->
+
+            <iframe
+                id="trailerVideo"
+                class="trailer-video"
+                src=""
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
+            </iframe>
+
+
+            <!-- WATCH FULL MOVIE -->
+
+            <button
+                id="watchTrailer"
+                
+               
+                
+            >
+                
+            </button>
+
+               <button
+               id="tite"
+               class="watch-button"
+            >
+                ▶ Watch
+            </button>
+
+
+
+            
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
